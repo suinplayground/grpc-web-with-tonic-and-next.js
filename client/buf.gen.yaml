@@ -1,0 +1,12 @@
+version: v1
+plugins:
+  # Protocol Buffersのmessageに対応するTypeScriptコードを生成する (_pb.tsで終わるファイル名のもの)
+  - name: es
+    out: services
+    opt: target=ts
+  # Protocol Buffersのserviceに対応するTypeScriptコードを生成する (_connectweb.tsで終わるファイル名のもの)
+  - name: connect-web
+    out: services
+    opt:
+      - target=ts
+      - import_extension=none
